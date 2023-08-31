@@ -1,3 +1,2 @@
 # sophieschnoll.github.io
 
-sdsaid
