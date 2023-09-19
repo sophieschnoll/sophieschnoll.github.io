@@ -1,11 +1,3 @@
-<!DOCTYPE css>
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Formatting a biography</title>
-    <style>
       body {
         background-color: #fff;
         color: #333;
@@ -47,5 +39,3 @@
         padding: 1em;
         padding-left: 2em;
       }
-    </style>
-  </head>
