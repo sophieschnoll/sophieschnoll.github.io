@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.score-box{
+    position: absolute;
+    top: 25px;
+    left: 50px;
+}
+
+.box1, .box2{
+    position: absolute;
+    height: 75px;
+    width: 200px;
+    opacity: 80%;
+}
+
+.box1{
+    background-color: white;
+    left: 200px;
+}
+
+.box2{
+    background-color: hsl(28, 100%, 50%);
+}
+
+.NED-score, .USA-score{
+    font-size: xx-large;
+    font-family: field-gothic-compact, sans-serif;
+    font-style: normal;
+    font-weight: 230000;
+}
+
+.NED-score{
+    position: absolute;
+    left: 95px;
+    top: 40px;
+}
+
+.USA-score{
+    position: absolute;
+    left: 300px;
+    top: 40px;   
+}
+
+.world-cup-marker{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+.AU-box, .date-box{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    font-size: xx-large;
+    font-family: field-gothic-compact, sans-serif;
+    font-style: normal;
+    font-weight: 230000;
+}
+
+.AU-box{
+    background-color: blue;
+    right: 110px;
+    bottom: 100px;
+    text-align: center;
+}
+
+.date-box{
+    background-color: green;
+    right: 10px;
+    bottom: 100px;
+    text-align: center;
+}
+
+.AU-box p{
+    padding-top: .3em;
+}
+
+.date-box p{
+    padding-top: .3em;
+}
