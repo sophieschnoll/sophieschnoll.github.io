@@ -2,7 +2,7 @@
     background-color: green;
 }
 #wideScreen{
-    background-color: red;
+    background-color: rgb(255, 0, 0);
 }
 #shortScreen{
     background-color: turquoise;
@@ -14,5 +14,23 @@
 @media only screen and (max-width: 600px) {
     #narrowScreen{
         background-color: purple;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    #wideScreen{
+        background-color: rgb(146, 213, 255);
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    #shortScreen{
+        background-color: rgb(255, 234, 0);
+    }
+}
+
+@media only screen and (min-height: 800px) {
+    #tallScreen{
+        background-color: rgb(255, 149, 0);
     }
 }
