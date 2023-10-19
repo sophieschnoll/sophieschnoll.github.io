@@ -1,0 +1,52 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(44, 71, 141);
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: rgb(40, 105, 226);
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+
+
+img{
+    width:30vw;
+    height: 30vh;
+}
+
+#red-ball{
+    background-color: rgb(255, 212, 72);
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+    
+}
+
+h1 {
+    color: rgb(219, 219, 219);
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+#red-ball:hover{
+    background-color: rgb(167, 205, 255);
+}
+
