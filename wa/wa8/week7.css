@@ -30,13 +30,13 @@ img{
 
 #red-ball{
     background-color: rgb(255, 212, 72);
-    width: 20px;
-    height:20px;
+    width: 40px;
+    height:40px;
     border-radius: 50%;
     position: absolute;
     left:5vw;
     top:0;
-    
+    transition: background-color 2s ;
 }
 
 h1 {
