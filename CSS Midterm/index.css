@@ -1,8 +1,8 @@
 body{
-    background-color: rgb(0, 98, 123);
-    background-image: url(background2.png);
+    background-color: rgb(0, 78, 109);
+    background-image: url(background-2.png);
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: right;
     background-attachment: fixed;
 }
 
@@ -10,28 +10,65 @@ h1{
     font-family: 'Noto Serif', serif;
     color: white;
     font-size: 40pt;
-    
 }
 
-.title{
-    display: flex;
+h2{
+    font-family: 'Noto Serif', serif;
+    color: white;
+    font-size: 25pt;
+}
+
+.title1 {
+    text-align: left;
+    padding-bottom: 2em;
+
+    /* display: flex;
     flex-direction: column;
+    border: 1px solid lightblue;
     align-content: flex-start;
     padding-left: 1em;
-    
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    */
 }
 
-#classics{
+/*.title2 {
+    
+}*/
+
+#main-title #subtitle{
+    float: top;
+    height: 40px;
+}    
+
+#subtitle{
+    float: top;
+    height: 40px;
+}
+
+/* #classics{
     font-family: 'Nobile', sans-serif;
     font-weight: 400;
     font-size: 25pt;
     color: white;
+} */
+
+.paragraph1{
+    float: left;
+    width: 50%;
 
 }
+
 
 p{
     font-family: 'Nobile', sans-serif;
     color: white;
-    font-size: 20pt;
+    font-size: 15pt;
     padding-left: 0.5em;
 }
+
+@media screen and (min-width: 400px) {
+    .column {
+      width: 100%;
+    }
+  }
