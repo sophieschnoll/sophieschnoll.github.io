@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(0, 78, 109);
+    background-image: url(background-2.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+}
+
+h1{
+    font-family: 'Noto Serif', serif;
+    color: white;
+    font-size: 40pt;
+}
+
+h2{
+    font-family: 'Noto Serif', serif;
+    color: white;
+    font-size: 25pt;
+}
+
+.title1 {
+    text-align: center;
+    padding-bottom: 1em;
+    padding-left: .5em;
+}

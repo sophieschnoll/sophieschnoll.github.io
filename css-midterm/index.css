@@ -19,8 +19,9 @@ h2{
 }
 
 .title1 {
-    text-align: left;
-    padding-bottom: 2em;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-left: .5em;
 
     /* display: flex;
     flex-direction: column;
@@ -32,19 +33,21 @@ h2{
     */
 }
 
-/*.title2 {
-    
-}*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 #main-title #subtitle{
     float: top;
     height: 40px;
 }    
 
-#subtitle{
+/*#subtitle{
     float: top;
     height: 40px;
-}
+} */
 
 /* #classics{
     font-family: 'Nobile', sans-serif;
@@ -53,18 +56,15 @@ h2{
     color: white;
 } */
 
-.paragraph1{
-    float: left;
-    width: 50%;
 
-}
 
 
 p{
     font-family: 'Nobile', sans-serif;
     color: white;
     font-size: 15pt;
-    padding-left: 0.5em;
+    padding: 0em 3em 3em 3em;
+    text-align: center;
 }
 
 @media screen and (min-width: 400px) {
@@ -72,3 +72,37 @@ p{
       width: 100%;
     }
   }
+
+.button{
+    background-color: white;
+    border: none;
+    color: #982065;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Noto Serif', serif;
+    font-size: 20pt;
+    border-radius: 2px;
+    width: 350px;
+    height: 120px; 
+    transition: background-color .3s ;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 9px #ababab;
+}
+
+.schedule-button{
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #982065;
+    color: #ffffff;
+}
+
+.button:active {
+    background-color: #982065;
+    box-shadow: 0 5px #ababab;
+    transform: translateY(4px);
+}
