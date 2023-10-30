@@ -15,11 +15,35 @@ h1{
 h2{
     font-family: 'Noto Serif', serif;
     color: white;
-    font-size: 25pt;
+    font-size: 30pt;
 }
+
 
 .title1 {
     text-align: center;
     padding-bottom: 1em;
     padding-left: .5em;
 }
+
+@media screen and (min-width: 400px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+.schedule-container{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid lightblue;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+
+    font-family: 'Nobile', sans-serif;
+    color: white;
+    font-size: 7pt;
+
+}
+
+
+
