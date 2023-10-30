@@ -40,7 +40,7 @@ h2{
   }
 
 #main-title #subtitle{
-    float: center;
+    float: none;
     height: 40px;
 }    
 
