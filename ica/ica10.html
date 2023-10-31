@@ -42,7 +42,7 @@
         const press = document.getElementById("press")
 
         button.addEventListener('click', updateName)
-        press.addEventListener('click', updateName)
+        press.addEventListener('click', updateName2)
 
         function updateName(){
             let name = 10;
@@ -50,6 +50,14 @@
             console.log(name);
 
             button.innerHTML = '<h1>Hello!</h1>'
+        }
+
+        function updateName2(){
+            let name = 10;
+            console.log("The function ran properly")
+            console.log(name);
+
+            press.innerHTML = '<h1>Yep. You clicked me!</h1>'
         }
 
         
