@@ -1,0 +1,44 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: lightgray;
+    width: 350px;
+    text-align: center;
+    padding: 1em;
+    border: dotted;
+    border-color: rgb(144, 86, 164);
+    color: #5f061b;
+    
+}
+
+label {
+    font-weight: bold;
+}
+
+div {
+    padding-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    width: 150px;
+}
+
+p {
+    background: #ecc0ff;
+    color: #5f061b;
+    padding: 10px;
+    visibility: hidden;
+}
+
+.randomize{
+    background-color: rgb(144, 86, 164);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#customname{
+    color: #5f061b;
+}

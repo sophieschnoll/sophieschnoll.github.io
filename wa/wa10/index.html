@@ -3,35 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <title>Silly story generator</title>
-
-    <style>
-      body {
-        font-family: helvetica, sans-serif;
-        width: 350px;
-      }
-
-      label {
-        font-weight: bold;
-      }
-
-      div {
-        padding-bottom: 20px;
-      }
-
-      input[type="text"] {
-        padding: 5px;
-        width: 150px;
-      }
-
-      p {
-        background: #ffc125;
-        color: #5e2612;
-        padding: 10px;
-        visibility: hidden;
-      }
-    </style>
   </head>
 
   <body>
@@ -50,5 +24,59 @@
     </div>
     <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
     <p class="story"></p>
+
+    <script>
+      /* html references */
+      const customName = document.getElementById('customname');
+      const randomize = document.querySelector('.randomize');
+      const story = document.querySelector('.story');
+
+      /* randomValue */
+      function randomValueFromArray(array) {
+        const random = Math.floor(Math.random()*array.length);
+        return array[random];
+      }
+
+      /* variables to declare */
+      let storyText = "It was 94 fahrenheit outside, so :insertx: decided to go for a stroll. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day."
+      const insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas']
+      const insertY = ['the soup kitchen', 'Disneyland', 'the White House']
+      const insertZ = ['spontaneously combusted', 'melted into a puddle on a sidewalk', 'turned into a slug and crawled away']
+
+      /* event listener */
+      randomize.addEventListener('click', result);
+
+      /* function */
+      function result() {
+        let newStory = storyText;
+        const xItem = randomValueFromArray(insertX);
+        const yItem = randomValueFromArray(insertY);
+        const zItem = randomValueFromArray(insertZ);
+
+        /* replaces the blank part of text with variable value */
+        newStory = newStory.replaceAll(':insertx:', xItem);
+        newStory = newStory.replaceAll(':inserty:', yItem);
+        newStory = newStory.replaceAll(':insertz:', zItem);
+        
+
+        if(customName.value !== '') {
+          const name = customName.value;
+          newStory = newStory.replaceAll('Bob', name);
+        }
+
+        if(document.getElementById("uk").checked) {
+          const weight = Math.round(300/2.205) + "kilograms";
+          const temperature =  Math.round(94 * 5/9) + "celsius";
+          newStory = newStory.replaceAll('300 pounds', weight);
+          newStory = newStory.replaceAll('94 fahrenheit', temperature);
+
+        }
+
+        story.textContent = newStory;
+        story.style.visibility = 'visible';
+        }
+
+    </script>
+
   </body>
 </html>
