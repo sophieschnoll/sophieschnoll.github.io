@@ -31,7 +31,7 @@ function displayQuote(question) {
     questionText.textContent = question;
 }
 
-function displayAnswer(answer) {
+function displayAnswer() {
     //const answerText = document.querySelector('#js-answer-text');
     answerText.textContent = answer;
 }
