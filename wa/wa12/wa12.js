@@ -5,7 +5,7 @@ const questionText = document.querySelector('#js-quote-text');
 let answerText = document.querySelector('#js-answer-text');
 let answer = '';
 
-const endpoint = 'https://trivia.cyberwisp.com/getrandomchristmasquestion';
+const endpoint = 'https://www.boredapi.com/api/activity';
 
 async function getQuote() {
     try {
@@ -14,32 +14,34 @@ async function getQuote() {
             throw Error(response.statusText);
         }
         const json = await response.json();
-        //console.log(json);
-        displayQuote(json['question']);
-        answer = json['answer'];
+        console.log(json);
+
+        displayQuote(json['activity']);
+        answer = json['type'];
         answerText.textContent = '';
     }
-
     catch(err) {
         console.log(err);
         alert('Failed to fetch new quote');
     }
 }
 
-function displayQuote(question) {
+function displayQuote(activity) {
     //const questionText = document.querySelector('#js-quote-text');
-    questionText.textContent = question;
+    questionText.textContent = activity;
+    document.body.style.backgroundColor = "rgb(0, 128, 148)";
 }
 
 function displayAnswer() {
     //const answerText = document.querySelector('#js-answer-text');
     answerText.textContent = answer;
+    document.body.style.backgroundColor = "rgba(250,150,150,0.35";   
 }
 
 // function testFunction() {
    //console.log("Answer button clicked");
 //}
 
-getQuote();
+//getQuote();
 
 

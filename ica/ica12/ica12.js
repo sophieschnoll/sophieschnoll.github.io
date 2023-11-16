@@ -10,10 +10,14 @@ const endpoint = 'https://trivia.cyberwisp.com/getrandomchristmasquestion';
 async function getQuote() {
     try {
         const response = await fetch(endpoint);
+
         if(!response.ok) {
             throw Error(response.statusText);
         }
+    
         const json = await response.json();
+        console.log(json);
+
         //console.log(json);
         displayQuote(json['question']);
         answer = json['answer'];
