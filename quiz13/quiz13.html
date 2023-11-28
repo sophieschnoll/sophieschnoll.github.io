@@ -41,10 +41,36 @@
     function displayCatInfo(catString) {
       let total = 0;
       let male = 0;
-
-      // Add your code here
-      //console.log(json);
+      let female = 0;
+      let catData = JSON.parse(catString);
       
+      // Add your code here
+      
+      
+
+      for (let i = 0; i < catData.length; i++) {
+        let mothers = catData.name;
+        if (i === catData.length - 1 && i !== 0) {
+          mothers += ' and ';
+        } else if (i !== 0) {
+          mothers += ', ';
+        }
+        mothers += catData[i].name;
+      
+        let kittens = catData.kittens;
+        total += kittens.length;
+
+        for (let k = 0; k < kittens.length; j++) {
+          if (kittens[k].gender === 'm') {
+            male++;
+          } else if (kittens[k].gender === 'f') {
+            female++;
+          }
+        }
+      }
+      mothers += '.';
+      kittenInfo = `There are ${total} kittens. ${male} males and ${female} females.`;
+
       // Don't edit the code below here!
 
       para1.textContent = motherInfo;
