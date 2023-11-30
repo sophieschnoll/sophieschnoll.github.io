@@ -120,8 +120,8 @@ for (let i = 0; i < newEmployee.employees.length; i++) {
     }
   }
 }
-console.log("Question 6")
-console.log(newEmployee)
+console.log("Question 6");
+console.log(newEmployee);
 
 
 
