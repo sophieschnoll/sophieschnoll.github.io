@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worst Phone Number Input</title>
+  <style>
+    body {
+      font-family: Comic Sans MS, cursive, sans-serif;
+      background-color: pink;
+      text-align: center;
+    }
+    
+    .input-container {
+      margin: 50px auto;
+      width: 300px;
+    }
+
+    .number-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 20px;
+      text-align: center;
+      color: red;
+      border: 5px dashed purple;
+      background-color: yellow;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      outline: none;
+    }
+
+    .submit-button {
+      margin-top: 20px;
+      padding: 15px;
+      font-size: 18px;
+      background-color: lime;
+      border: 3px double blue;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-container">
+    <input type="text" class="number-input" id="phoneInput" placeholder="Enter your phone number...">
+    <button class="submit-button" onclick="submitPhoneNumber()">Submit</button>
+  </div>
+
+  <script>
+    function submitPhoneNumber() {
+      alert("Your phone number has been securely sent to the dark web!");
+    }
+  </script>
+</body>
+</html>
