@@ -1,7 +1,8 @@
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
     text-align: center;
-    background-color: #ffcccb;
+    background-color: #ccb6ff;
     margin: 0;
     padding: 0;
   }
@@ -10,9 +11,9 @@ body {
     margin: 100px auto;
     padding: 20px;
     width: 400px;
-    border: 5px solid #ff6666;
+    border: 5px solid #996dff;
     border-radius: 10px;
-    background-color: #ff9999;
+    background-color: #d6c5ff;
   }
 
   .digit-input {
@@ -20,12 +21,14 @@ body {
     height: 50px;
     font-size: 24px;
     margin: 5px;
-    border: 2px solid #ff6666;
+    border: 2px solid #996dff;
     border-radius: 5px;
     background-color: #ffcccc;
   }
 
   #submit-btn {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 18px;
