@@ -23,7 +23,7 @@ body {
     margin: 5px;
     border: 2px solid #996dff;
     border-radius: 5px;
-    background-color: #ffcccc;
+    background-color: #d6c5ff;
   }
 
   #submit-btn {
@@ -34,7 +34,7 @@ body {
     font-size: 18px;
     border: none;
     border-radius: 5px;
-    background-color: #ff6666;
+    background-color: #996dff;
     color: #fff;
     cursor: pointer;
   }
