@@ -14,11 +14,10 @@ document.addEventListener("DOMContentLoaded", function() {
       const number = document.createElement("div");
       number.classList.add("floating-number");
       number.textContent = phoneNumber[i];
-      updatePosition(number); // Set initial random position
+      updatePosition(number); 
 
       number.addEventListener("click", function() {
           if (clickedNumbers.length < 9) {
-              // Wrong behavior: Display a random number when clicked
               const wrongNumber = Math.floor(Math.random() * 10);
               clickedNumbers.push(wrongNumber);
               displayedNumberElement.textContent = clickedNumbers.join('');
@@ -39,13 +38,12 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       setTimeout(function() {
           requestAnimationFrame(animateFloatingNumbers);
-      }, 980); // Adjust the delay (in milliseconds) to control the speed
+      }, 980); //milliseconds
   }
 
-  animateFloatingNumbers(); // Start the animation loop
+  animateFloatingNumbers();
 
   clearButton.addEventListener("click", function() {
-      // Clear the displayed digits
       clickedNumbers = [];
       displayedNumberElement.textContent = "";
       hideErrorMessage();
@@ -58,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
           hideErrorMessage();
       } else {
           showErrorMessage();
-          setTimeout(hideErrorMessage, 5000); // Hide the error message after 5 seconds
+          setTimeout(hideErrorMessage, 5000); 
       }
   });
 
