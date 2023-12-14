@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Phone Number Display</title>
+    <style>
+        body {
+            
+            overflow: hidden;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .floating-number {
+            position: absolute;
+            font-size: 24px;
+            color: #333;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        #phone-display {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            padding: 5px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #clear-button {
+            position: fixed;
+            top: 55px;
+            right: 10px;
+            padding: 5px;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        #submit-button {
+            position: fixed;
+            top: 100px;
+            right: 10px;
+            padding: 5px;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #error-message {
+            position: fixed;
+            top: 150px;
+            right: 10px;
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="phone-display">Phone Number: <span id="displayed-number"></span></div>
+    <div id="clear-button">Clear</div>
+    <div id="submit-button">Submit</div>
+    <div id="error-message">Please enter at least 9 digits.</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const phoneNumber = "1234567890";
+            const floatingNumbers = document.createElement("div");
+            floatingNumbers.classList.add("floating-number-container");
+            document.body.appendChild(floatingNumbers);
+
+            let clickedNumbers = [];
+            const displayedNumberElement = document.getElementById("displayed-number");
+            const clearButton = document.getElementById("clear-button");
+            const submitButton = document.getElementById("submit-button");
+            const errorMessage = document.getElementById("error-message");
+
+            for (let i = 0; i < phoneNumber.length; i++) {
+                const number = document.createElement("div");
+                number.classList.add("floating-number");
+                number.textContent = phoneNumber[i];
+                updatePosition(number); // Set initial random position
+
+                number.addEventListener("click", function() {
+                    if (clickedNumbers.length < 9) {
+                        // Wrong behavior: Display a random number when clicked
+                        const wrongNumber = Math.floor(Math.random() * 10);
+                        clickedNumbers.push(wrongNumber);
+                        displayedNumberElement.textContent = clickedNumbers.join('');
+                    }
+                });
+
+                floatingNumbers.appendChild(number);
+            }
+
+            function updatePosition(element) {
+                element.style.left = `${Math.random() * window.innerWidth}px`;
+                element.style.top = `${Math.random() * window.innerHeight}px`;
+            }
+
+            function animateFloatingNumbers() {
+                for (let i = 0; i < floatingNumbers.children.length; i++) {
+                    updatePosition(floatingNumbers.children[i]);
+                }
+                setTimeout(function() {
+                    requestAnimationFrame(animateFloatingNumbers);
+                }, 960); // Adjust the delay (in milliseconds) to control the speed
+            }
+
+            animateFloatingNumbers(); // Start the animation loop
+
+            clearButton.addEventListener("click", function() {
+                // Clear the displayed digits
+                clickedNumbers = [];
+                displayedNumberElement.textContent = "";
+                hideErrorMessage();
+            });
+
+            submitButton.addEventListener("click", function() {
+                if (clickedNumbers.length >= 9) {
+                    const submittedPhoneNumber = displayedNumberElement.textContent || "No number submitted";
+                    alert("Thank you for submitting your number: " + submittedPhoneNumber + ". We promise it will not be shared on the dark web.");
+                    hideErrorMessage();
+                } else {
+                    showErrorMessage();
+                    setTimeout(hideErrorMessage, 5000); // Hide the error message after 5 seconds
+                }
+            });
+
+            function showErrorMessage() {
+                errorMessage.style.display = "block";
+            }
+
+            function hideErrorMessage() {
+                errorMessage.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

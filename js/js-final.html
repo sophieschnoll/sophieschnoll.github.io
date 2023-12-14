@@ -3,25 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Final Project</title>
+    <title>Dynamic Phone Number Display</title>
     <link rel="stylesheet" href="js-final.css">
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
 </head>
 <body>
-    <br></br>
-    <br></br>
-    <h1>Enter Your Phone Number</h1>
-    <div id="phone-container">
-        <div class="input-box" contenteditable="false">4</div>
-        <div class="input-box" contenteditable="true">1</div>
-        <div class="input-box" contenteditable="false">6</div>
-        <div class="input-box" contenteditable="false">3</div>
-        <div class="input-box" contenteditable="true">____</div>
-        <div class="input-box" contenteditable="true">____</div>
-        <div class="input-box" contenteditable="false">9</div>
-    </div>
-    <br></br>
-    <button id="submit-btn">Submit</button>
+    <div id="phone-display">Phone Number: <span id="displayed-number"></span></div>
+    <div id="clear-button">Clear</div>
+    <div id="submit-button">Submit</div>
+    <div id="error-message">Please enter at least 9 digits.</div>
 
     <script src="js-final.js"></script>
 </body>
